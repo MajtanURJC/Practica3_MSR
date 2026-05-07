@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<robot name="Robot_Rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- ARGUMENTOS -->
+<xacro:arg name="prefix" default="rover"/>
+<xacro:arg name="update_rate" default="30"/>
+
+<!-- IMPORTS -->
+<xacro:include filename="$(find practica3)/urdf/base/robot_base.urdf.xacro"/>
+<xacro:include filename="$(find practica3)/urdf/wheels/wheels.urdf.xacro"/>
+<xacro:include filename="$(find practica3)/urdf/arm/arm.urdf.xacro"/>
+
+<xacro:include filename="$(find practica3)/urdf/sensors/imu.urdf.xacro"/>
+<xacro:include filename="$(find practica3)/urdf/sensors/camera_front.urdf.xacro"/>
+<xacro:include filename="$(find practica3)/urdf/sensors/camera_ee.urdf.xacro"/>
+
+<xacro:include filename="$(find practica3)/urdf/utils/materials.xacro"/>
+
+
+
+<!-- REP-105 -->
+<link name="base_footprint"/>
+<joint name="base_footprint_joint" type="fixed">
+  <parent link="base_footprint"/>
+  <child link="base_link"/>
+  <origin xyz="0 0 1.5" rpy="0 0 0"/>
+</joint>
+
+<!-- MATERIALS -->
+<xacro:materials/>
+
+<!-- ROBOT -->
+<xacro:robot_base/>
+<xacro:wheels/>
+<xacro:robot_arm/>
+
+<!-- SENSORES -->
+<xacro:imu prefix="$(arg prefix)" update_rate="$(arg update_rate)"/>
+<xacro:camera_front prefix="$(arg prefix)" update_rate="$(arg update_rate)"/>
+<xacro:camera_ee prefix="$(arg prefix)" update_rate="$(arg update_rate)"/>
+
+<!-- ROS2 CONTROL -->
+<xacro:include filename="$(find practica3)/urdf/ros2_control.urdf.xacro"/>
+<xacro:arg name="config_controllers" default="$(find practica3)/config/rover_controllers.yaml"/>
+<xacro:arg name="update_rate" default="100"/>
+<xacro:ros2_control/>
+
+</robot>

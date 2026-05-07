@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:macro name="camera_ee" params="prefix update_rate">
+
+  <link name="${prefix}_camera_ee_link"/>
+
+  <joint name="${prefix}_camera_ee_joint" type="fixed">
+    <parent link="Extensor_link"/>
+    <child link="${prefix}_camera_ee_link"/>
+    <origin xyz="0 0 0.8" rpy="0 -1.5708 0"/>
+  </joint>
+
+  <gazebo reference="${prefix}_camera_ee_link">
+    <sensor name="${prefix}_camera_ee_sensor" type="camera">
+      <visualize>true</visualize>
+      <update_rate>${update_rate}</update_rate>
+      <topic>/arm_camera/image</topic>
+
+      <camera>
+        <horizontal_fov>1.57</horizontal_fov>
+
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+
+        <clip>
+          <near>0.10</near>
+          <far>10.0</far>
+        </clip>
+
+        <optical_frame_id>${prefix}_camera_ee_link</optical_frame_id>
+      </camera>
+    </sensor>
+  </gazebo>
+
+</xacro:macro>
+
+</robot>
