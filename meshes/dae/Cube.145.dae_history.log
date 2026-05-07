@@ -1,3 +1,0 @@
-Instantiated with filepath=None->None, scale=[0.699999988079071, 0.05000000074505806, 0.10000000149011612], mesh=<bpy_struct, Mesh("Cube.145") at 0x723ada130d20>, meshname=Cube.145, material=None, mesh_orientation=None
-->trying export of <bpy_struct, Mesh("Cube.145") at 0x723ada130d20> to /home/martin/mod_env/src/Blender_Car/MartinAntonio_Novo_Practica2/Robot_Rover/meshes/dae/Cube.145.dae
-->wrote dae to /home/martin/mod_env/src/Blender_Car/MartinAntonio_Novo_Practica2/Robot_Rover/meshes/dae/Cube.145.dae from bpy_types.Mesh
