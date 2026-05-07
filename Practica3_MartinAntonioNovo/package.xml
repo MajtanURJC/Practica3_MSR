@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>practica3</name>
+  <version>0.0.0</version>
+  <description>Robot description package for practica 3</description>
+
+  <maintainer email="ma.novo.2023@alumnos.urjc.es">
+    ma.novo.2023
+  </maintainer>
+
+  <license>Apache-2.0</license>
+
+  <!-- Build system -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Runtime dependencies -->
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+
+  <!-- Important: tell colcon this is ROS 2 ament -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

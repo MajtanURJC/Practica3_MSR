@@ -1,0 +1,9 @@
+# Default initial positions for Robot_Rover's ros2_control fake system
+
+initial_positions:
+  Arm2_link_joint: 0
+  Arm3_link_joint: 0
+  Arm4_link_joint: 0
+  Extensor_link_joint: 0
+  Garra_Left_link_joint: 0
+  Garra_Right_link_joint: 0
