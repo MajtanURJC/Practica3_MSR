@@ -24,6 +24,9 @@ La gráfica representa la evolución de la fuerza/esfuerzo aplicado en el brazo 
 ## Imagen RVIZ de Joint State Publisher
 <img width="1863" height="1007" alt="Captura desde 2026-05-07 18-18-35" src="https://github.com/user-attachments/assets/932dfc27-48e9-4d46-9a2e-323b6fc82402" />
 
+ ## Imagen RVIZ solo de las TF:
+ <img width="796" height="573" alt="Captura desde 2026-05-09 11-58-52" src="https://github.com/user-attachments/assets/96c2515d-2bec-488f-a063-251592b05173" />
+
 
 ## Enlace descarga ROSBAG:
 https://drive.google.com/file/d/1v_vWztG4xynhkGLdQVnlzI2oNfzhqpLa/view?usp=drive_link
