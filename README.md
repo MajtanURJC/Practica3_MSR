@@ -35,7 +35,7 @@ https://drive.google.com/file/d/1v_vWztG4xynhkGLdQVnlzI2oNfzhqpLa/view?usp=drive
 ros2 launch practica3 gazebo_robot.launch.py world_name:=urjc_excavation_msr  
 ros2 launch Robot_Rover_moveit_config move_group.launch.py  
 ros2 launch practica3 controller.launch.py   
-
+ros2 launch Robot_Rover_moveit_config moveit_rviz.launch.py
 
 
 
